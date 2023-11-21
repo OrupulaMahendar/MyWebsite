@@ -16,7 +16,8 @@ app.use(
     extended: true,
   })
 )
-
+app.use('/.netlify/function/api',router);
+module.exports.handler = serverless(app);
 //GET Request to root URL(/)
 /*app.get('/',(request, response)=>{
 
